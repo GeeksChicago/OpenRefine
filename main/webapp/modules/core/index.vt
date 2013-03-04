@@ -35,7 +35,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=8;IE=9;chrome=1;">
-  <title>OpenRefine</title>
+  <title>AMS Refine</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <script type="text/javascript" src="wirings.js"></script>
   $scriptInjection
@@ -43,16 +43,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <script>Refine.encodings = $encodingJson; Refine.defaultEncoding = $defaultEncoding;</script>
 </head>
 <body>
-  <div id="header">
-    <img alt="OpenRefine" src="images/logo-openrefine-30.png" width="129" height="29" />
-    <span id="slogan">A power tool for working with messy data.</span>
+  <div id="header" style="background:url(images/nav-back.png) transparent repeat-x;">
+    <img alt="OpenRefine" src="images/cpb_ams.png" />
+    <span id="slogan">A power tool for AMS working with messy data.</span>
   </div>
   
   <div id="left-panel" class="main-layout-panel"><div id="left-panel-body">
     <ul id="action-area-tabs">
     </ul>
     
-    <div id="project-links">
+    <!--<div id="project-links">
       <div id="logo-container">
         <img alt="OpenRefine" src="images/logo-gem-40.png" />
         <div id="openrefine-version"></div>
@@ -60,8 +60,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <ul>
         <li><a href="http://code.google.com/p/google-refine/wiki/DocumentationForUsers">Help</a></li>
         <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
+      </ul> 
+    </div>-->
   </div></div> <!-- left-panel -->
 
   <div id="right-panel" class="main-layout-panel"><div id="right-panel-body">

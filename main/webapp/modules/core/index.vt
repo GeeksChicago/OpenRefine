@@ -48,7 +48,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <span id="slogan">A power tool for AMS working with messy data.</span>
   </div>
   
-  <div id="left-panel" class="main-layout-panel" style="display:none;"><div id="left-panel-body">
+  <div id="left-panel" class="main-layout-panel" ><div id="left-panel-body">
     <ul id="action-area-tabs" >
     </ul>
     

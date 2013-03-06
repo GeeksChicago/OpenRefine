@@ -48,13 +48,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <a id="app-home-button" href="./"> <img alt="OpenRefine" src="images/cpb_ams.png" /></a>
       <div id="project-title">
         <span id="project-name-button" class="app-path-section" title="Click to rename project"></span>
-        <a id="project-permalink-button" href="javascript:{}" class="secondary">Permalink</a>
+        <a id="project-permalink-button" href="javascript:{}" class="secondary" style="display:none;">Permalink</a>
       </div>
       <div id="project-controls">
         <a href="./" class="button" target="_blank" style="display:none;">Open...</a>
-        <a class="button" bind="exportButton" id="export-button" href="#export"><span class="button-menu">Export</span></a>
+        <a class="button" bind="exportButton" id="export-button" href="#export" style="display:none;"><span class="button-menu"  >Export</span></a>
         <a href="./" class="button">Commit to AMS</a>
-        <a href="http://ams.avpreserve.com" class="button">Cancel (Back to AMS)</a>
+        <a href="javascript://" onclick="cancelChanges();" class="button">Cancel (Back to AMS)</a>
         <a href="http://code.google.com/p/google-refine/wiki/DocumentationForUsers" target="_blank" class="button" style="display:none;">Help</a>
       </div>
     </div>
@@ -84,6 +84,36 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <div bind="viewPanelDiv" id="view-panel"></div>
       </div>
       <div bind="processPanelDiv" id="notification-container"></div>
+      <div style="width: 200px;margin: 0 auto;display:none;" id="time_div">
+      	<div id="custom_notification">Please save your changes...</div>
+      </div>
     </div>
+    <script type="text/javascript">
+    function cancelChanges(){
+    
+    	$('<div></div>').appendTo('body')
+  		.html('<div><h6>No Changes will be save.Are you sure you want to leave.</h6></div>')
+  		.dialog({
+      		modal: true, title: 'Caution', zIndex: 10000, autoOpen: true,
+      		width: 'auto', resizable: false,
+      		buttons: {
+          		Yes: function () {
+              		window.location.href="http://amsqa.avpreserve.com";
+          	},
+          	No: function () {
+              
+              $(this).dialog("close");
+          	}
+      	},
+      	close: function (event, ui) {
+          $(this).remove();
+      }
+});
+$('.ui-dialog').css('background','white');
+$('.ui-dialog-titlebar').css('background','url(images/nav-back.png) transparent repeat-x');
+$('.ui-dialog-titlebar').css('border','1px solid black');
+$('.ui-dialog-content').css('min-height','20px');
+    }
+    </script>
   </body>
 </html>

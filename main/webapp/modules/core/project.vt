@@ -51,10 +51,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <a id="project-permalink-button" href="javascript:{}" class="secondary">Permalink</a>
       </div>
       <div id="project-controls">
-        <a href="./" class="button" target="_blank">Open...</a>
+        <a href="./" class="button" target="_blank" style="display:none;">Open...</a>
         <a class="button" bind="exportButton" id="export-button" href="#export"><span class="button-menu">Export</span></a>
-        <a href="./" class="button" target="_blank">Commit to AMS</a>
-        <a href="http://code.google.com/p/google-refine/wiki/DocumentationForUsers" target="_blank" class="button">Help</a>
+        <a href="./" class="button">Commit to AMS</a>
+        <a href="http://ams.avpreserve.com" class="button">Cancel (Back to AMS)</a>
+        <a href="http://code.google.com/p/google-refine/wiki/DocumentationForUsers" target="_blank" class="button" style="display:none;">Help</a>
       </div>
     </div>
     
@@ -76,7 +77,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <div bind="summaryBarDiv" id="summary-bar">
             <!-- row/record counts -->
           </div>
-          <div bind="extensionBarDiv" id="extension-bar">
+          <div bind="extensionBarDiv" id="extension-bar" style="display:none;">
             Extensions: <span bind="menuContainer" id="extension-bar-menu-container"></span>
           </div>
         </div>

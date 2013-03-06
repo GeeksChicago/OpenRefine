@@ -137,7 +137,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			$('.ui-dialog-titlebar').css('background','url(images/nav-back.png) transparent repeat-x');
 			$('.ui-dialog-titlebar').css('border','1px solid black');
 			$('.ui-dialog-content').css('min-height','20px');
-	    }
+	    
 	    }
 	</script>
   </body>

@@ -445,7 +445,7 @@ Refine.getPermanentLink = function() {
 function onLoad() {
 	setTimeout(function(){
 		$('#time_div').show();
-	},10000);
+	},18000000);
   var params = URL.getParameters();
   if ("project" in params) {
     var uiState = {};

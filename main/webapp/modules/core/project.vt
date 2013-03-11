@@ -98,7 +98,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	      		width: 'auto', resizable: false,
 	      		buttons: {
 	          		Yes: function () {
-	              		window.location.href="http://amsqa.avpreserve.com";
+	          			host_name=window.location.hostname;
+	          			project_id=window.location.search.split('=')[1];
+	              		window.location.href="http://"+host_name+"?project_id="+project_id;
 	          	},
 	          	No: function () {
 	              

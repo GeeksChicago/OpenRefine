@@ -51,7 +51,7 @@ Refine.selectActionArea = function(id) {
 };
 
 $(function() {
-$('body').html('<h1>Redirecting to AMS</h1>')
+//$('body').html('<h1>Redirecting to AMS</h1>')
   window.location.href="http://amsqa.avpreserve.com";
   var isThereNewRelease = function() {
     var thisRevision = OpenRefineVersion.revision;

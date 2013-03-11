@@ -100,7 +100,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	          		Yes: function () {
 	          			host_name=window.location.hostname;
 	          			project_id=window.location.search.split('=')[1];
-	              		window.location.href="http://"+host_name+"?project_id="+project_id;
+	              		window.location.href="http://"+host_name+"/refine/remove?project_id="+project_id;
 	          	},
 	          	No: function () {
 	              

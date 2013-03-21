@@ -180,11 +180,6 @@ Refine.reinitializeProjectData = function(f, fError) {
     },
     'json'
   );
-  columnLenth=$('.data-header-table td').length;
-	$('.data-header-table td').each(function(obj,id){
-	console.log(obj);
-	console.log(id);
-	});
 };
 
 Refine._renameProject = function() {
@@ -451,7 +446,14 @@ function onLoad() {
 	setTimeout(function(){
 		$('#time_div').show();
 	},18000000);
-	console.log('Fahad');
+	setTimeout(function(){
+	columnLenth=$('.data-header-table td').length;
+	$('.data-header-table td').each(function(index,object){
+	console.log(index);
+	console.log(object);
+	});
+	},5000);
+	
   var params = URL.getParameters();
   if ("project" in params) {
     var uiState = {};
@@ -471,7 +473,6 @@ function onLoad() {
       }
     );
   }
-  
 }
 
 $(onLoad);

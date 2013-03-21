@@ -180,6 +180,11 @@ Refine.reinitializeProjectData = function(f, fError) {
     },
     'json'
   );
+  columnLenth=$('.data-header-table td').length;
+	$('.data-header-table td').each(function(obj,id){
+	console.log(obj);
+	console.log(id);
+	});
 };
 
 Refine._renameProject = function() {
@@ -466,11 +471,7 @@ function onLoad() {
       }
     );
   }
-  columnLenth=$('.data-header-table td').length;
-	$('.data-header-table td').each(function(obj,id){
-	console.log(obj);
-	console.log(id);
-	});
+  
 }
 
 $(onLoad);

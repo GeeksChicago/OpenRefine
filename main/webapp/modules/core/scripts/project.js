@@ -405,7 +405,7 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
   }
 
   $.post(
-    "command/core/get-rows?" + $.param({ project: theProject.id, start: start, limit: 100 }) + "&callback=?",
+    "command/core/get-rows?" + $.param({ project: theProject.id, start: start, limit: limit }) + "&callback=?",
     body,
     function(data) {
       theProject.rowModel = data;
@@ -441,8 +441,8 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
 			}
 		});
 	});
-	$('.viewpanel-rowrecord').hide();
-	$('.viewpanel-pagesize').hide();
+	//$('.viewpanel-rowrecord').hide();
+	//$('.viewpanel-pagesize').hide();
 	},3000);
   
 };

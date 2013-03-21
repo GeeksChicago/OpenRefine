@@ -449,13 +449,13 @@ function onLoad() {
 	setTimeout(function(){
 	columnLength=$('.data-header-table td').length;
 	$('.data-header-table td').each(function(index,object){
-	if(columnLength-15>index){
+	if(columnLength-15<index){
 	$(this).hide();
 	}
 	});
 	$('.data-table tr').each(function(index,object){
 	$(this).children().each(function(){
-	if(columnLength-15>index){
+	if(columnLength-15<index){
 		$(this).hide();
 	}
 	});

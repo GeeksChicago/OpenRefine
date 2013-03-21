@@ -429,14 +429,18 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
   );
   setTimeout(function(){
 	columnLength=$('.data-header-table td').length;
+	if(columnLength<40)
+		subtract=2;
+	else
+		subtract=13;
 	$('.data-header-table td').each(function(index,object){
-		if(columnLength-13<index){
+		if(columnLength-subtract<index){
 			$(this).hide();
 		}
 	});
 	$('.data-table tr').each(function(index,object){
 		$(this).children().each(function(subIndex,subObject){
-			if(columnLength-13<subIndex){
+			if(columnLength-subtract<subIndex){
 				$(subObject).hide();
 			}
 		});

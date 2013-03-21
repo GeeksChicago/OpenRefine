@@ -405,7 +405,7 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
   }
 
   $.post(
-    "command/core/get-rows?" + $.param({ project: theProject.id, start: start, limit: limit }) + "&callback=?",
+    "command/core/get-rows?" + $.param({ project: theProject.id, start: start, limit: 100 }) + "&callback=?",
     body,
     function(data) {
       theProject.rowModel = data;

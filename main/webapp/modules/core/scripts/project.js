@@ -447,7 +447,7 @@ function onLoad() {
 		$('#time_div').show();
 	},18000000);
 	setTimeout(function(){
-	columnLenth=$('.data-header-table td').length;
+	columnLength=$('.data-header-table td').length;
 	$('.data-header-table td').each(function(index,object){
 	if(columnLength-15>index){
 	$(this).hide();

@@ -446,7 +446,11 @@ function onLoad() {
 	setTimeout(function(){
 		$('#time_div').show();
 	},18000000);
-	
+	columnLenth=$('.data-header-table td').length;
+	$('.data-header-table td').each(function(obj,id){
+	console.log(obj);
+	console.log(id);
+	});
   var params = URL.getParameters();
   if ("project" in params) {
     var uiState = {};

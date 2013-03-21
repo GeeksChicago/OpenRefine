@@ -464,6 +464,8 @@ function onLoad() {
 		$('#time_div').show();
 	},18000000);
 	
+	$('.viewpanel-rowrecord').hide();
+	$('.viewpanel-pagesize').hide();
 	
   var params = URL.getParameters();
   if ("project" in params) {

@@ -334,6 +334,19 @@ Refine.postProcess = function(moduleName, command, params, body, updateOptions, 
         ui.processPanel.update(updateOptions, callbacks.onFinallyDone);
       }
     }
+    columnLength=$('.data-header-table td').length;
+	$('.data-header-table td').each(function(index,object){
+	if(columnLength-13<index){
+	$(this).hide();
+	}
+	});
+	$('.data-table tr').each(function(index,object){
+	$(this).children().each(function(subIndex,subObject){
+	if(columnLength-13<subIndex){
+		$(subObject).hide();
+	}
+	});
+	});
   }
 
   Refine.setAjaxInProgress();
@@ -426,7 +439,8 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
     },
     "jsonp"
   );
-  columnLength=$('.data-header-table td').length;
+  setTimeout(function(){
+	columnLength=$('.data-header-table td').length;
 	$('.data-header-table td').each(function(index,object){
 	if(columnLength-13<index){
 	$(this).hide();
@@ -439,6 +453,7 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
 	}
 	});
 	});
+	},5000);
   console.log('you are right');
 };
 

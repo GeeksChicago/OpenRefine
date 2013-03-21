@@ -441,6 +441,8 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
 			}
 		});
 	});
+	$('.viewpanel-rowrecord').hide();
+	$('.viewpanel-pagesize').hide();
 	},3000);
   
 };
@@ -464,8 +466,7 @@ function onLoad() {
 		$('#time_div').show();
 	},18000000);
 	
-	$('.viewpanel-rowrecord').hide();
-	$('.viewpanel-pagesize').hide();
+	
 	
   var params = URL.getParameters();
   if ("project" in params) {

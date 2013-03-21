@@ -455,7 +455,9 @@ function onLoad() {
 	});
 	$('.data-table tr').each(function(index,object){
 	$(this).children().each(function(){
-	$(this).hide();
+	if(columnLength-15>index){
+		$(this).hide();
+	}
 	});
 	});
 	},5000);

@@ -426,6 +426,7 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
     },
     "jsonp"
   );
+  console.log('you are right');
 };
 
 Refine.getPermanentLink = function() {

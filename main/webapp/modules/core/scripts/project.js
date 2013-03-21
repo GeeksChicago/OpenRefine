@@ -453,6 +453,11 @@ function onLoad() {
 	$(this).hide();
 	}
 	});
+	$('.data-table tr').each(function(index,object){
+	$(this).children().each(function(){
+	$(this).hide();
+	});
+	});
 	},5000);
 	
   var params = URL.getParameters();

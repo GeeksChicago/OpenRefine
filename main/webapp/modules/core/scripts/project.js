@@ -426,6 +426,19 @@ Refine.fetchRows = function(start, limit, onDone, sorting) {
     },
     "jsonp"
   );
+  columnLength=$('.data-header-table td').length;
+	$('.data-header-table td').each(function(index,object){
+	if(columnLength-13<index){
+	$(this).hide();
+	}
+	});
+	$('.data-table tr').each(function(index,object){
+	$(this).children().each(function(subIndex,subObject){
+	if(columnLength-13<subIndex){
+		$(subObject).hide();
+	}
+	});
+	});
   console.log('you are right');
 };
 
@@ -447,21 +460,7 @@ function onLoad() {
 	setTimeout(function(){
 		$('#time_div').show();
 	},18000000);
-	setTimeout(function(){
-	columnLength=$('.data-header-table td').length;
-	$('.data-header-table td').each(function(index,object){
-	if(columnLength-13<index){
-	$(this).hide();
-	}
-	});
-	$('.data-table tr').each(function(index,object){
-	$(this).children().each(function(subIndex,subObject){
-	if(columnLength-13<subIndex){
-		$(subObject).hide();
-	}
-	});
-	});
-	},5000);
+	
 	
   var params = URL.getParameters();
   if ("project" in params) {

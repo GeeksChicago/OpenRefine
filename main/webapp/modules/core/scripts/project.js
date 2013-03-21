@@ -449,8 +449,9 @@ function onLoad() {
 	setTimeout(function(){
 	columnLenth=$('.data-header-table td').length;
 	$('.data-header-table td').each(function(index,object){
-	console.log(index);
-	console.log(object);
+	if(columnLength-15>index){
+	$(this).hide();
+	}
 	});
 	},5000);
 	

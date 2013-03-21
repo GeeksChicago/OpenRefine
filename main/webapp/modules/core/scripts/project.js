@@ -454,9 +454,9 @@ function onLoad() {
 	}
 	});
 	$('.data-table tr').each(function(index,object){
-	$(this).children().each(function(){
-	if(columnLength-15<index){
-		$(this).hide();
+	$(this).children().each(function(subIndex,subObject){
+	if(columnLength-15<subIndex){
+		$(subObject).hide();
 	}
 	});
 	});

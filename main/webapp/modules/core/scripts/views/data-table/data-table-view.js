@@ -182,7 +182,7 @@ DataTableView.prototype._renderPagingControls = function(pageSizeControls, pagin
   }
 
   $('<span>Show: </span>').appendTo(pageSizeControls);
-  var sizes = [ 5, 10, 25, 50 ];
+  var sizes = [ 5, 10, 25, 50, 100 ];
   var renderPageSize = function(index) {
     var pageSize = sizes[index];
     var a = $('<a href="javascript:{}"></a>')
